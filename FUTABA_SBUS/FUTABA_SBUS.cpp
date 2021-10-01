@@ -7,7 +7,7 @@ void FUTABA_SBUS::begin(){
 	  		1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,0,0};
 	int16_t loc_servos[18]    = {
   			1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,1023,0,0};
-  	port.begin(BAUDRATE);
+  	port.begin(BAUDRATE, SBUS_SERIAL_CONFIG);
 
 	memcpy(sbusData,loc_sbusData,25);
 	memcpy(channels,loc_channels,18);
